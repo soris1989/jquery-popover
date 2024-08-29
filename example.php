@@ -4,11 +4,12 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="http://rawgit.com/tlindig/position-calculator/master/dist/position-calculator.min.js"></script>
-    <!-- <script src="./public/js/position-calculator.js?v=<?= time() ?>"></script> -->
     <meta charset="utf-8">
     <script>
         jQuery(function($) {
             var $tooltip = $('<div class="tooltip" style="display:none;position:absolute;padding:10px;background:rgba(0,0,0,0.5);"></div>').appendTo(document.body);
+
+            var is_shown = false;
 
             function showTooltip(e) {
                 console.log(e)
@@ -33,7 +34,9 @@
                 $tooltip.css({
                     top: posResult.moveBy.y + "px",
                     left: posResult.moveBy.x + "px"
-                })
+                });
+
+                is_shown = true;
             }
 
             // $('.has_tooltip').on('focus', showTooltip);
@@ -49,10 +52,14 @@
 
             $(window).on('click', function(e) {
                 $tooltip.hide();
+
+                is_shown = false;
             });
 
             $(window).on('scroll', function(e) {
-                showTooltip(e);
+                if (is_shown) {
+                    showTooltip(e);
+                }
             });
         });
     </script>

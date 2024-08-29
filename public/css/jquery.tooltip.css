@@ -1,0 +1,52 @@
+.tooltip-modal {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    width: 100%;
+    max-width: 400px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .tooltip-modal {
+        max-width: calc(100% - 5%);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .tooltip-modal {
+        max-width: calc(100% - 5%);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .tooltip-modal {
+        max-width: 500px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .tooltip-modal {
+        max-width: 500px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .tooltip-modal {
+        max-width: 500px;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .tooltip-modal {
+        max-width: 500px;
+    }
+}
